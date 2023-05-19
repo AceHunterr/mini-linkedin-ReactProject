@@ -103,16 +103,8 @@ const Drawer = styled(MuiDrawer, { shouldForwardProp: (prop) => prop !== 'open' 
 export default function Sidenav() {
   const theme = useTheme();
   const [open, setOpen] = React.useState(true);
-  const [menudata, setMenudata] = React.useState("Home");
+  const [selectedItem, setSelectedItem] = React.useState("Home"); 
   const navigate = useNavigate();
-
-  // const handleDrawerOpen = () => {
-  //   setOpen(true);
-  // };
-
-  // const handleDrawerClose = () => {
-  //   setOpen(false);
-  // };
 
   const customTheme = createTheme({
     palette: {
@@ -126,88 +118,64 @@ export default function Sidenav() {
     },
   });
 
+  const [listItems] = React.useState([
+    {
+      text: "Home",
+      url: "/",
+      icon: <MailIcon />
+    },
+    {
+      text: "Jobs",
+      url: "/jobs",
+      icon: <MailIcon />
+    }
+  ]);
+
+  const handleListItemClick = (url, itemText) => {
+    setSelectedItem(itemText); 
+    navigate(url);
+  };
+
   return (
     <>
-    <ThemeProvider theme={customTheme}>
-      <Box sx={{ display: 'flex' }}>
-        <CssBaseline />
-        {/* <AppBar position="fixed" elevation={5} sx={{backgroundColor: "#080808"}}>
-          <Toolbar>
-            <IconButton
-              color="inherit"
-              aria-label="open drawer"
-              onClick={()=>{setOpen(!open)}}
-              edge="start"
-
-            >
-              <MenuIcon />
-            </IconButton>
-            <Typography variant="h6" noWrap component="div">
-              <img src={logo} alt="Logo" height={50}  />
-            </Typography>
-          </Toolbar>
-        </AppBar> */}
-        <Drawer variant="permanent" open={open}>
-          <DrawerHeader>
-            <IconButton onClick={()=>setOpen(!open)}>
-              {theme.direction === 'rtl' ? <ChevronRightIcon /> : <ChevronLeftIcon />}
-            </IconButton>
-          </DrawerHeader>
-          {/* <Divider /> */}
-          <List>
-
-              <ListItem  disablePadding sx={{ display: 'block' }} onClick={()=>{navigate("/")}}  >
-                <ListItemButton
-                  sx={{
-                    minHeight: 48,
-                    justifyContent: open ? 'initial' : 'center',
-                    px: 2.5,
-                  }}
-                >
-                  <ListItemIcon
+      <ThemeProvider theme={customTheme}>
+        <Box sx={{ display: 'flex' }}>
+          <CssBaseline />
+          <Drawer variant="permanent" open={open}>
+            <DrawerHeader>
+              <IconButton onClick={() => setOpen(!open)}>
+                {theme.direction === 'rtl' ? <ChevronRightIcon /> : <ChevronLeftIcon />}
+              </IconButton>
+            </DrawerHeader>
+            <List>
+              {listItems.map((item, i) => (
+                <ListItem disablePadding sx={{ display: 'block' }} key={i}>
+                  <ListItemButton
+                    onClick={() => handleListItemClick(item.url, item.text)} // Update the onClick handler
                     sx={{
-                      minWidth: 0,
-                      mr: open ? 3 : 'auto',
-                      justifyContent: 'center',
+                      minHeight: 48,
+                      justifyContent: open ? 'initial' : 'center',
+                      px: 2.5,
+                      backgroundColor: selectedItem === item.text && open ? 'rgba(0, 0, 0, 0.1)' : 'transparent', // Highlight the selected item
                     }}
                   >
-                    <MailIcon />
-                  </ListItemIcon>
-                  <ListItemText primary="Home"  />
-                </ListItemButton>
-              </ListItem>
-
-
-              <ListItem  disablePadding sx={{ display: 'block' }} onClick={()=>{navigate("/jobs")}}>
-                <ListItemButton
-                  sx={{
-                    minHeight: 48,
-                    justifyContent: open ? 'initial' : 'center',
-                    px: 2.5,
-                  }}
-                >
-                  <ListItemIcon
-                    sx={{
-                      minWidth: 0,
-                      mr: open ? 3 : 'auto',
-                      justifyContent: 'center',
-                    }}
-                  >
-                    <MailIcon />
-                  </ListItemIcon>
-                  <ListItemText primary="Jobs"  />
-                </ListItemButton>
-              </ListItem>
-
-
-
-          </List>
-          {/* <Divider /> */}
-        </Drawer>
-        {/* <Box component="main" sx={{ flexGrow: 1, p: 3 }}>
-        </Box> */}
-      </Box>
-    </ThemeProvider>
+                    <ListItemIcon
+                      sx={{
+                        minWidth: 0,
+                        mr: open ? 3 : 'auto',
+                        justifyContent: 'center',
+                      }}
+                    >
+                      {open ? item.icon : <item.icon.type />}
+                    </ListItemIcon>
+                    {open && <ListItemText primary={item.text} />}
+                  </ListItemButton>
+                </ListItem>
+              ))}
+            </List>
+          </Drawer>
+        </Box>
+      </ThemeProvider>
     </>
   );
 }
