@@ -1,9 +1,20 @@
-import React from 'react'
+import React,{} from 'react';
+import Box from '@mui/material/Box';
+import Sidenav from '../components/sidenav';
 
 const AboutUs = () => {
   return (
-    <div>About_Us</div>
-  )
-}
+    <Box sx={{display:"flex"}}> 
+    <Sidenav />
+    <Box component="main" sx={{ flexGrow: 1, p: 3}}>
+      {/* Add your home page content here */}
 
-export default AboutUs
+      <h2>AboutUs</h2>
+    
+
+    </Box>
+    </Box>
+  );
+};
+
+export default AboutUs;

@@ -128,7 +128,42 @@ export default function Sidenav() {
       text: "Jobs",
       url: "/jobs",
       icon: <MailIcon />
-    }
+    },
+    {
+      text: "Resources",
+      url: "/resources",
+      icon: <MailIcon />
+    },
+    {
+      text: "Recruitment",
+      url: "/recruitment",
+      icon: <MailIcon />
+    },
+    {
+      text: "Training Programs",
+      url: "/training-programs",
+      icon: <MailIcon />
+    },
+    {
+      text: "Referral",
+      url: "/referral",
+      icon: <MailIcon />
+    },
+    {
+      text: "Scan Your Resume",
+      url: "/scan-resume",
+      icon: <MailIcon />
+    },
+    {
+      text: "About Us",
+      url: "/about-us",
+      icon: <MailIcon />
+    },
+    {
+      text: "Profile",
+      url: "/profile",
+      icon: <MailIcon />
+    },
   ]);
 
   const handleListItemClick = (url, itemText) => {
