@@ -24,37 +24,34 @@ const HomePage = () => {
 
 ])
 
-
   return (
-    <Box sx={{display:"flex"}}> 
-    <Sidenav />
-    <Box component="main" sx={{ flexGrow: 1, p: 3}}>
-      {/* Add your home page content here */}
+    <Box sx={{ display: "flex" }}>
+      <Sidenav />
+      <Box component="main" sx={{ flexGrow: 1, p: 3 }}>
+        <div className="header-container">
+          <h2 className='main-intro-text'>Opportunity for you <span className='gradient-text'>JOBS</span></h2>
+          <div className="buttons-container">
+            <button className="login-btn">Login</button>
+            <button className="login-btn">Sign Up</button>
+          </div>
+        </div>
 
-      <h2>Hello</h2>
-      <div>
-        <h2>Oppurtunity for you JOBS</h2>
         <section>
-          <div className="home_cards_container">
+          <div className="home-cards-container">
             <div className="cards">
-            {
-                cards.map((card,i)=>(
-                    <div key ={i} className="card">
-                    <img src={card.img_src} alt='Img' />
-                    <h1>{card.title}</h1>
-                    {/* <p>{card.text}</p> */}
+              {cards.map((card, i) => (
+                <div key={i} className="card">
+                  <img src={card.img_src} alt="Img" />
+                  <h1>{card.title}</h1>
                 </div>
-                ))
-              }    
-              </div>
+              ))}
             </div>
-          </section>
-      </div>
-
-
-    </Box>
+          </div>
+        </section>
+      </Box>
     </Box>
   );
+  
 };
 
 export default HomePage;
