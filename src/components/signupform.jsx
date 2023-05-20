@@ -7,18 +7,22 @@ const SignUpForm = () => {
     <span>Sign Up</span>
     <form>
       <div class="form-group">
+        <h2>Email</h2>
         <input type="text" id="email" required />
         <label for="email">Email</label>
       </div>
       <div class="form-group">
+      <h2>Name</h2>
         <input type="text" id="name" required />
         <label for="name">Name</label>
       </div>
       <div class="form-group">
+      <h2>Password</h2>
         <input type="password" id="password" required />
         <label for="password">Password</label>
       </div>
       <div class="form-group">
+      <h2>Confirm Password</h2>
         <input type="password" id="confirm-password" required />
         <label for="confirm-password">Confirm Password</label>
       </div>
