@@ -158,6 +158,87 @@ h1{
 }
 
 
+/* Signup */
+
+
+.signup-container {
+  max-width: 100vh;
+  /* margin: 0 auto; */
+  padding: 20px;
+  background-color: var(--color-secondary-black-darker);
+  border-radius: 5px;
+}
+
+.signup-container span {
+  font-size: 32px;
+
+}
+
+.signup-container form {
+  margin-top: 20px;
+}
+
+.signup-container .form-group {
+  margin-bottom: 15px;
+  position: relative;
+}
+
+.signup-container label {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  transform: translateY(-50%);
+  transition: 0.3s;
+  pointer-events: none;
+  color: #888;
+}
+
+.signup-container input {
+  width: 100%;
+  padding: 8px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+.signup-container input:focus~label,
+.signup-container input:valid~label {
+  top: 10px;
+  font-size: 10px;
+  /* background-image: linear-gradient(to right, #8F4DC5, #FE2198); */
+  background-image: linear-gradient(to right, #8F4DC5,  #ff3988, #ff31a3, #ff29bf,#FE2198);
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;}
+
+.signup-container button[type="submit"] {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.signup-container button[type="submit"]:hover {
+  background-color: #45a049;
+}
+
+.signup-container p {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.signup-container a {
+  color: #4CAF50;
+  text-decoration: none;
+}
+
+.signup-container a:hover {
+  text-decoration: underline;
+}
 
 
 
@@ -215,7 +296,9 @@ h1{
 
   .card{
     flex : 0 0 100%;
-    max-width : 100%;
+    max-width : 60%;
+    margin: auto;
+    margin-top: 60px;
 
   }
 }

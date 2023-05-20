@@ -24,24 +24,19 @@ const HomePageCards = () => {
 
   return (
     <div>
-    <h2>Oppurtunity for you JOBS</h2>
         <section>
-          <div className="home_cards_container">
+          <div className="home-cards-container">
             <div className="cards">
-            {
-                cards.map((card,i)=>(
-                    <div key ={i} className="card">
-                    <img src={card.img_src} alt='Img' />
-                    <h1>{card.title}</h1>
-                    {/* <p>{card.text}</p> */}
+              {cards.map((card, i) => (
+                <div key={i} className="card">
+                  <img src={card.img_src} alt="Img" />
+                  <h1>{card.title}</h1>
                 </div>
-                ))
-            }
-                
+              ))}
             </div>
           </div>
         </section>
-      </div>
+    </div>
   )
 }
 

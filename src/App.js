@@ -1,6 +1,5 @@
 import Heading from "./components/Header";
 import Footer from "./components/Footer";
-import Sidebar from "./components/sidebar";
 import {Routes,Route,BrowserRouter} from 'react-router-dom';
 import HomePage from './pages/home.jsx'
 import AboutUs from './pages/About_Us'
@@ -11,31 +10,12 @@ import Referral from './pages/Referral'
 import Resources from './pages/Resources'
 import ScanResume from './pages/Scan_Resume'
 import TrainingPrograms from './pages/Training_Programs'
-import HomePageCards from "./components/HomePageCards";
-import Sidenav from "./components/sidenav";
-
+import SignUpPage from "./pages/SignUpPage";
 
 const App = () => {
     return (
-      
-      // <Router>
-      // <Sidebar>
-      //   <Routes>
-      //     <Route path="/" element={<HomePage />} />
-      //     <Route path="/about" element={<AboutUs />} />
-      //     <Route path="/jobs" element={<Jobs />} />
-      //     <Route path="/profile" element={<Profile />} />
-      //     <Route path="/recruitment" element={<Recruitment />} />
-      //     <Route path="/referral" element={<Referral />} />
-      //     <Route path="/resources" element={<Resources />} />
-      //     <Route path="/scan-resume" element={<ScanResume />} />
-      //     <Route path="/training-programs" element={<TrainingPrograms />} />
-      //   </Routes>
-      // </Sidebar>
-      //   </Router>
-
       <div className="hehe">
-        {/* <Sidenav /> */}
+
 
         <BrowserRouter>
           <Routes>
@@ -48,6 +28,7 @@ const App = () => {
             <Route path="/scan-resume" exact element={<ScanResume />}></Route>
             <Route path="/about-us" exact element={<AboutUs />}></Route>
             <Route path="/profile" exact element={<Profile />}></Route>
+            <Route path="/sign-up" exact element={<SignUpPage />}></Route>
           </Routes>
         </BrowserRouter>
         {/* <Sidenav /> */}

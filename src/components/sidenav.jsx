@@ -17,7 +17,18 @@ import ListItemButton from '@mui/material/ListItemButton';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
 import InboxIcon from '@mui/icons-material/MoveToInbox';
+import DocumentScannerIcon from '@mui/icons-material/DocumentScanner';
+
 import MailIcon from '@mui/icons-material/Mail';
+import HomeIcon from '@mui/icons-material/Home';
+import WorkIcon from '@mui/icons-material/Work';
+import ForumIcon from '@mui/icons-material/Forum';
+import PortraitIcon from '@mui/icons-material/Portrait';
+import HandshakeIcon from '@mui/icons-material/Handshake';
+import CategoryIcon from '@mui/icons-material/Category';
+
+
+
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import { red, blue } from '@mui/material/colors';
 import HomePage from '../pages/home';
@@ -122,27 +133,27 @@ export default function Sidenav() {
     {
       text: "Home",
       url: "/",
-      icon: <MailIcon />
+      icon: <HomeIcon />
     },
     {
       text: "Jobs",
       url: "/jobs",
-      icon: <MailIcon />
+      icon: <WorkIcon />
     },
     {
       text: "Resources",
       url: "/resources",
-      icon: <MailIcon />
+      icon: <CategoryIcon />
     },
     {
       text: "Recruitment",
       url: "/recruitment",
-      icon: <MailIcon />
+      icon: <HandshakeIcon />
     },
     {
       text: "Training Programs",
       url: "/training-programs",
-      icon: <MailIcon />
+      icon: <InboxIcon />
     },
     {
       text: "Referral",
@@ -152,18 +163,14 @@ export default function Sidenav() {
     {
       text: "Scan Your Resume",
       url: "/scan-resume",
-      icon: <MailIcon />
+      icon: <DocumentScannerIcon />
     },
     {
       text: "About Us",
       url: "/about-us",
-      icon: <MailIcon />
+      icon: <ForumIcon />
     },
-    {
-      text: "Profile",
-      url: "/profile",
-      icon: <MailIcon />
-    },
+    
   ]);
 
   const handleListItemClick = (url, itemText) => {
@@ -179,19 +186,20 @@ export default function Sidenav() {
           <Drawer variant="permanent" open={open}>
             <DrawerHeader>
               <IconButton onClick={() => setOpen(!open)}>
-                {theme.direction === 'rtl' ? <ChevronRightIcon /> : <ChevronLeftIcon />}
+                {/* {theme.direction === 'rtl' ? <ChevronRightIcon /> : <ChevronLeftIcon />} */}
+                {open ? <ChevronLeftIcon /> : <ChevronRightIcon />}
               </IconButton>
             </DrawerHeader>
             <List>
               {listItems.map((item, i) => (
                 <ListItem disablePadding sx={{ display: 'block' }} key={i}>
                   <ListItemButton
-                    onClick={() => handleListItemClick(item.url, item.text)} // Update the onClick handler
+                    onClick={() => handleListItemClick(item.url, item.text)} 
                     sx={{
                       minHeight: 48,
                       justifyContent: open ? 'initial' : 'center',
                       px: 2.5,
-                      backgroundColor: selectedItem === item.text && open ? 'rgba(0, 0, 0, 0.1)' : 'transparent', // Highlight the selected item
+                      backgroundColor: selectedItem === item.text && open ? 'rgba(0, 0, 0, 0.1)' : 'transparent', 
                     }}
                   >
                     <ListItemIcon
@@ -207,6 +215,36 @@ export default function Sidenav() {
                   </ListItemButton>
                 </ListItem>
               ))}
+
+
+              <br></br>
+              <br></br>
+              <Divider />
+              <br></br>
+              
+              <ListItem disablePadding sx={{ display: 'block' }}>
+                  <ListItemButton
+                    onClick={() => navigate("/profile")} 
+                    sx={{
+                      minHeight: 48,
+                      justifyContent: open ? 'initial' : 'center',
+                      px: 2.5,
+                      backgroundColor: selectedItem === "Profile" && open ? 'rgba(0, 0, 0, 0.1)' : 'transparent', 
+                    }}
+                  >
+                    <ListItemIcon
+                      sx={{
+                        minWidth: 0,
+                        mr: open ? 3 : 'auto',
+                        justifyContent: 'center',
+                      }}
+                    >
+                      {open ? <PortraitIcon /> : <PortraitIcon />}
+                    </ListItemIcon>
+                    {open && <ListItemText primary="Profile" />}
+                  </ListItemButton>
+                </ListItem>
+
             </List>
           </Drawer>
         </Box>
