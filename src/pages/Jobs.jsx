@@ -1,8 +1,8 @@
 import React,{} from 'react';
 import Box from '@mui/material/Box';
 import Sidenav from '../components/sidenav';
-import { Products } from '../components/jobsCards';
-import productData from '../jobsContent';
+import { JobCard } from '../components/jobsCards';
+import jobData from '../jobsContent';
 
 const Jobs = () => {
   return (
@@ -11,15 +11,15 @@ const Jobs = () => {
     <Box component="main" sx={{ flexGrow: 1, p: 3}}>
 
       <div className='App'>
-                {productData.map(contents => (
-                    <Products 
+                {jobData.map(contents => (
+                    <JobCard
                         key={contents.id}
                         image={contents.image}
-                        name={contents.name}
-                        price={contents.price}
-                        totalSales={contents.totalSales}
-                        timeLeft={contents.timeLeft}
-                        rating={contents.rating}
+                        job_title={contents.job_title}
+                        company={contents.company}
+                        view={contents.view}
+                        share={contents.share}
+                        tags = {contents.tags}
                     />
                 ))}
             </div>

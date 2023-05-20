@@ -12,6 +12,7 @@ import ScanResume from './pages/Scan_Resume'
 import TrainingPrograms from './pages/Training_Programs'
 import SignUpPage from "./pages/SignUpPage";
 import LoginPage from "./pages/LoginUpPage";
+import JobDetail from "./pages/JobDetail";
 
 const App = () => {
     return (
@@ -31,6 +32,7 @@ const App = () => {
             <Route path="/profile" exact element={<Profile />}></Route>
             <Route path="/sign-up" exact element={<SignUpPage />}></Route>
             <Route path="/login" exact element={<LoginPage />}></Route>
+            <Route path="/job-detail" exact element={<JobDetail />}></Route>
           </Routes>
         </BrowserRouter>
         {/* <Sidenav /> */}

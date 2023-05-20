@@ -1,25 +1,29 @@
-import { FaShoppingCart, FaRegBookmark, FaStar, FaFireAlt } from 'react-icons/fa';
+import { FaRegBookmark} from 'react-icons/fa';
 
-export function Products(props) {
-    return (
-      <div className='productList'>
-        <div key={props.id} className='productCard'>
-          <div className='productCard__content'>
-            <div className='productCard__header'>
-            <img src={props.image} alt='product-img' className='productImage'></img>
-            <h3 className='productName'>{props.name}</h3>
+export function JobCard(props) {
+  return (
+    <div className='jobList'>
+      <div key={props.id} className='jobCard'>
+        <div className='jobCard__content'>
+          <div className='jobCard__header'>
+            <img src={props.image} alt='job-img' className='jobImage' />
+            <h3 className='jobName'>{props.job_title}</h3>
+            <FaRegBookmark className='jobCard__wishlist' />
+          </div>
+          <h3>{props.company}</h3>
+          <div className='displayStack__1'>
+            <div className='tagsContainer'>
+              {props.tags.map((tag, index) => (
+                <span key={index} className='tagItem'>{tag}</span>
+              ))}
             </div>
-            <div>
-              <FaRegBookmark className='productCard__wishlist' />
-              
-            </div>
-            <div className='displayStack__1'>
-              <div className='productPrice'><a href='/jobs'>{props.price}</a></div>
-              <div className='productSales'>{props.totalSales} units sold</div>
+            <div className='displayStack__2'>
+              <div className='jobview'><a href='/'>{props.view}</a></div>
+              <div className='jobview'><a href='/'>{props.share}</a></div>
             </div>
           </div>
         </div>
       </div>
-    );
-  }
-  
+    </div>
+  );
+}

@@ -17,7 +17,8 @@ body {
   /* Colors */
   --color-black: #000;
   --color-white: #fff;
-  --color-grey-primary: #f0f0f0;
+  --color-grey-primary: #dddddd;
+  --color-grey-secondary: #bfbfbf;
   --color-secondary-black: #191919;
   --color-secondary-black-darker: #121212;
   --color-red : #E8505B;
@@ -106,7 +107,6 @@ body{
 .home_cards_container{
   max-width: 1300;
   width: 60%;
-  /* margin:auto; */
 }
 
 section{
@@ -143,7 +143,6 @@ h1{
   background-color: var(--color-secondary-black);
   border-radius: 10px;
   padding: 20px;
-  /* border: 2px solid #fff; */
   margin-top: 10px;
   margin-bottom: 1rem;
 }
@@ -164,7 +163,6 @@ h1{
 
 .signup-container {
   max-width: 50%;
-  /* margin: 0 auto; */
   padding: 20px;
   background-color: var(--color-secondary-black-darker);
   border-radius: 5px;
@@ -220,7 +218,6 @@ h1{
 .signup-container input:valid~label {
   top: 60px;
   font-size: 10px;
-  /* background-image: linear-gradient(to right, #8F4DC5, #FE2198); */
   background-image: linear-gradient(to right, #8F4DC5,  #ff3988, #ff31a3, #ff29bf,#FE2198);
   background-clip: text;
   -webkit-background-clip: text;
@@ -228,14 +225,7 @@ h1{
 }
 
 .signup-container button[type="submit"] {
-  /* width: 100%;
-  padding: 10px;
-  font-size: 16px;
-  background-color: #4CAF50;
-  color: white;
-  border: none;
-  border-radius: 3px;
-  cursor: pointer; */
+
   width: 30%;
   margin: auto;
   -webkit-border-radius: 17;
@@ -276,14 +266,6 @@ h1{
   text-decoration: none;
 }
 
-/* .signup-container a:hover {
-  text-decoration: underline;
-  background-image: linear-gradient(to left #ffffff, #FE2198);
-  background-clip: text;
-  -webkit-background-clip: text;
-  color: transparent;
-} */
-
 
 
 
@@ -295,13 +277,13 @@ h1{
   justify-content: center;
 }
 
-.productList{
+.jobList{
   display: flex;
   justify-content: space-evenly;
   margin-top: 5rem;
 }
 
-.productCard{
+.jobCard{
   position: relative;
   background-color: var(--color-secondary-black);
   margin: 1rem;
@@ -311,7 +293,7 @@ h1{
   transition: 0.2s;
 }
 
-.productCard:hover{
+.jobCard:hover{
   transform: translateY(-0.5rem);
   box-shadow: 0.5rem 0.75rem 1.5rem #bbbbbb;
   background-image: linear-gradient(to right, #8F4DC5,  #ff3988, #ff31a3, #ff29bf,#FE2198);
@@ -321,14 +303,14 @@ h1{
   cursor: pointer;
 }
 
-.productImage{
+.jobImage{
   margin-top: 2rem;
   max-width: 20%;
   height: auto;
 }
 
 
-.productCard__wishlist{
+.jobCard__wishlist{
   position: absolute;
   right: 3rem;
   margin: 1rem;
@@ -339,17 +321,17 @@ h1{
 }
 
 
-.productCard__content {
+.jobCard__content {
   display: flex;
   align-items: flex-start;
 }
 
-.productName{
+.jobName{
   font-size: 1rem;
   margin: 0;
 }
 
-.productDetails {
+.jobDetails {
   display: flex;
   flex-direction: column;
   margin-left: 10px; 
@@ -363,13 +345,13 @@ h1{
   align-items: center;
 }
 
-.productPrice{
+.jobPrice{
   font-size: 1.5rem;
   font-weight: bold;
 }
 
-.productSales,
-.productTime{
+.jobSales,
+.jobTime{
   font-size: 1.1rem;
 } */
 
@@ -384,13 +366,13 @@ h1{
   justify-content: center;
 } */
 
-.productList {
+.jobList {
   display: flex;
   justify-content: space-evenly;
   margin-top: 5rem;
 }
 
-.productCard {
+.jobCard {
   position: relative;
   background-color: var(--color-secondary-black);
   margin: 1rem;
@@ -400,7 +382,7 @@ h1{
   transition: 0.2s;
 }
 
-.productCard:hover {
+.jobCard:hover {
   transform: translateY(-0.5rem);
   box-shadow: 0.5rem 0.75rem 1.5rem #bbbbbb;
   background-image: linear-gradient(to right, #8F4DC5,  #ff3988, #ff31a3, #ff29bf,#FE2198);
@@ -410,8 +392,7 @@ h1{
   cursor: pointer;
 }
 
-
-.productCard__wishlist {
+.jobCard__wishlist {
   position: absolute;
   top: 1rem;
   right: 1rem;
@@ -421,67 +402,89 @@ h1{
   color: var(--color-grey-primary);
 }
 
-.productCard__wishlist{
-  color: var(--color-purple);
-}
-
-.productCard__wishlist:hover{
+.jobCard__wishlist:hover {
   color: white;
 }
 
-
-.productCard__content {
+.jobCard__content {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   padding: 2rem;
 }
 
-.productCard__header {
-  display: flex; /* Add this line to make the image and bookmark icon appear side by side */
-  align-items: center; /* Add this line to vertically align the image and bookmark icon */
+.jobCard__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   padding-bottom: 2rem;
 }
 
-.productImage {
-  
+.jobImage {
   max-width: 30%;
   height: auto;
-  margin-right: 1rem; /* Add this line to provide spacing between the image and product name */
+  margin-right: 1rem;
 }
 
-.productName {
+.jobName {
   font-size: 1.5rem;
   margin-top: 1rem;
-  flex-grow: 1; /* Add this line to allow the product name to take up the remaining space */
+  flex-grow: 1;
 }
 
-.displayStack__1,
-.displayStack__2 {
+.displayStack__1 {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
 }
 
-.productPrice {
-  font-size: 1.5rem;
-  font-weight: bold;
+.tagsContainer {
+  display: flex;
+  align-items: flex-start;
+  margin-top: 10px;
 }
 
-.productPrice a{
-  color: white;
+.tagItem {
+  display: inline-block;
+  /* background-color: var(--color-black); */
+  /* color: var(--color-grey-primary); */
+  padding: 4px 8px;
+  border-radius: 4px;
+  margin-right: 6px;
+  box-shadow: 1px 1px 1px 1px var(--color-grey-secondary);
+}
+
+.tagItem:hover
+{
+  color: var(--color-grey-primary);
+}
+
+.displayStack__2 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  margin-left: 20px;
+}
+
+.jobview {
+  font-size: 1rem;
+  /* background-color: var(--color-black); */
+  
+  padding: 3px;
+  margin-bottom: 10px;
+}
+.jobview a {
+  color: inherit;
   text-decoration: none;
+  border-radius: 4px;
+  box-shadow: 1px 1px 1px 1px var(--color-grey-secondary);
+  padding: 6px;
+
 }
 
-
-
-
-
-
-
-
-
-
+.jobview a:hover{
+  color: var(--color-grey-primary);
+}
 
 
 
@@ -551,5 +554,8 @@ h1{
   }
   .signup-container{
     max-width: 100%;
+  }
+  .displayStack__2 {
+    margin: 0;
   }
 }
