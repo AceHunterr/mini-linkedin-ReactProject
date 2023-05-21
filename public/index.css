@@ -369,7 +369,8 @@ h1{
 .jobList {
   display: flex;
   justify-content: space-evenly;
-  margin-top: 5rem;
+  margin-top: 0rem;
+  /* margin-right: 90px; */
 }
 
 .jobCard {
@@ -499,7 +500,14 @@ h1{
 
 
 /* Media Queries */
+
+
 @media(max-width:1000px){
+  .jobList{
+    margin-right: 0;
+  }
+}
+  @media(max-width:1000px){
   section{
     padding: 20px 0px;
   }
@@ -527,6 +535,12 @@ h1{
   }
   .buttons-container{
     padding-top: 1rem;
+  }
+
+  .jobcard-container > * {
+    flex: 1 0 100% !important;
+    max-width: 100% !important;
+    margin: auto;
   }
 }
 

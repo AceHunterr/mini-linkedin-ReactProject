@@ -10,7 +10,7 @@ const Jobs = () => {
     <Sidenav />
     <Box component="main" sx={{ flexGrow: 1, p: 3}}>
 
-      <div className='App'>
+      <div className='jobcard-container' style={{ display: 'flex', flexWrap: 'wrap',justifyContent: 'center',gap:'50px', marginBottom:'0px'}}>
                 {jobData.map(contents => (
                     <JobCard
                         key={contents.id}
@@ -20,6 +20,7 @@ const Jobs = () => {
                         view={contents.view}
                         share={contents.share}
                         tags = {contents.tags}
+                        style={{ flex: '1 10 50%', maxWidth: '50%'  }}
                     />
                 ))}
             </div>
