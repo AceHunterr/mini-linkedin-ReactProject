@@ -13,6 +13,7 @@ import TrainingPrograms from './pages/Training_Programs'
 import SignUpPage from "./pages/SignUpPage";
 import LoginPage from "./pages/LoginUpPage";
 import JobDetail from "./pages/JobDetail";
+import tagsPage from "./pages/tagsPage";
 
 const App = () => {
     return (
@@ -33,6 +34,7 @@ const App = () => {
             <Route path="/sign-up" exact element={<SignUpPage />}></Route>
             <Route path="/login" exact element={<LoginPage />}></Route>
             <Route path="/job-detail" exact element={<JobDetail />}></Route>
+            <Route path="/tags" exact element={<tagsPage />}></Route>
           </Routes>
         </BrowserRouter>
         {/* <Sidenav /> */}
