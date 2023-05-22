@@ -11,13 +11,14 @@ export function JobCard(props) {
         navigate('/tags'); 
       };
 
+    const customClassName = props.work_type;
   return (
     <div className='jobList'>
-      <div key={props.id} className='jobCard' >
+      <div key={props.id} className={`${customClassName} jobCard`} >
         <div className='jobCard__content'>
           <div className='jobCard__header' onClick={navigatetoJobDetails}>
             <img src={props.image} alt='job-img' className='jobImage' />
-            <h3 className='jobName'>{props.job_title}</h3>
+            <h3 className='jobName '>{props.job_title}</h3>
             <FaRegBookmark className='jobCard__wishlist' />
           </div>
           <h3 className='jobCompany'>{props.company}</h3>

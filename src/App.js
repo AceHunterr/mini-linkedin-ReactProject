@@ -14,6 +14,8 @@ import SignUpPage from "./pages/SignUpPage";
 import LoginPage from "./pages/LoginUpPage";
 import JobDetail from "./pages/JobDetail";
 import tagsPage from "./pages/tagsPage";
+import Internships from "./pages/Internships";
+import Freelancer from "./pages/Freelancer";
 
 const App = () => {
     return (
@@ -35,6 +37,8 @@ const App = () => {
             <Route path="/login" exact element={<LoginPage />}></Route>
             <Route path="/job-detail" exact element={<JobDetail />}></Route>
             <Route path="/tags" exact element={<tagsPage />}></Route>
+            <Route path="/internships" exact element={<Internships/>}></Route>
+            <Route path="/freelancer" exact element={<Freelancer />}></Route>
           </Routes>
         </BrowserRouter>
         {/* <Sidenav /> */}

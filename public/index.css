@@ -19,12 +19,15 @@ body {
   --color-white: #fff;
   --color-grey-primary: #dddddd;
   --color-grey-secondary: #bfbfbf;
+  --color-grey-darker: #7e7e7e;
+
   --color-secondary-black: #191919;
   --color-secondary-black-darker: #121212;
   --color-red : #E8505B;
   --color-blue : #4E95FE;
   --color-yellow : #FFD966;
   --color-purple: #632F93;
+  --color-green : #00D085;
   
   /* border radiuses */
   --br-5xs: 8px;
@@ -266,105 +269,35 @@ h1{
   text-decoration: none;
 }
 
-
-
-
-
-
-/* .App{
-  display: grid;
-  grid-template-columns: 30rem 30rem 30rem;
-  justify-content: center;
+.works-text{
+  padding-bottom: 4rem ;
 }
 
-.jobList{
-  display: flex;
-  justify-content: space-evenly;
-  margin-top: 5rem;
+.jobs-text{
+ color: var(--color-green);
 }
 
-.jobCard{
-  position: relative;
-  background-color: var(--color-secondary-black);
-  margin: 1rem;
-  flex: 1 0 25rem;
-  max-width: 30rem;
-  max-height: 50rem;
-  transition: 0.2s;
+.work_type_job{
+  background-color: var(--color-green);
 }
 
-.jobCard:hover{
-  transform: translateY(-0.5rem);
-  box-shadow: 0.5rem 0.75rem 1.5rem #bbbbbb;
-  background-image: linear-gradient(to right, #8F4DC5,  #ff3988, #ff31a3, #ff29bf,#FE2198);
-  background-clip: text;
-  -webkit-background-clip: text;
-  color: transparent;
-  cursor: pointer;
+.internships-text{
+ color: var(--color-red);
 }
 
-.jobImage{
-  margin-top: 2rem;
-  max-width: 20%;
-  height: auto;
+.work_type_internships{
+  background-color: var(--color-red);
 }
 
+.freelancer-text{
+  color: var(--color-blue);
+ }
+ 
+ .work_type_freelancer{
+   background-color: var(--color-blue);
+ }
+ 
 
-.jobCard__wishlist{
-  position: absolute;
-  right: 3rem;
-  margin: 1rem;
-  font-size: 2rem;
-  transition: 0.2s;
-  cursor: pointer;
-  color: var(--color-grey-primary);
-}
-
-
-.jobCard__content {
-  display: flex;
-  align-items: flex-start;
-}
-
-.jobName{
-  font-size: 1rem;
-  margin: 0;
-}
-
-.jobDetails {
-  display: flex;
-  flex-direction: column;
-  margin-left: 10px; 
-}
-
-.displayStack__1,
-.displayStack__2{
-  margin: 2rem 0;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.jobPrice{
-  font-size: 1.5rem;
-  font-weight: bold;
-}
-
-.jobSales,
-.jobTime{
-  font-size: 1.1rem;
-} */
-
-
-
-
-
-
-/* .App {
-  display: grid;
-  grid-template-columns: 30rem 30rem 30rem;
-  justify-content: center;
-} */
 
 .jobList {
   display: flex;
@@ -375,12 +308,11 @@ h1{
 
 .jobCard {
   position: relative;
-  background-color: var(--color-secondary-black);
   margin: 1rem;
   flex: 1 0 25rem;
   max-width: 30rem;
   max-height: 50rem;
-  transition: 0.2s;
+  transition: 0.3s;
 }
 
 .jobCard:hover {
@@ -400,12 +332,13 @@ h1{
   top: 1rem;
   right: 1rem;
   font-size: 2rem;
-  transition: 0.2s;
+  
   cursor: pointer;
   color: var(--color-grey-primary);
 }
 
 .jobCard__wishlist:hover {
+  transition: 0.3s;
   color: white;
 }
 
@@ -434,6 +367,7 @@ h1{
   font-size: 1.5rem;
   margin-top: 1rem;
   flex-grow: 1;
+  transition: 0.1s;
   
 }
 .jobName:hover{
@@ -441,8 +375,14 @@ h1{
   color: var(--color-grey-primary);
 }
 
+.jobCompany
+{
+  transition: 0.1s;
+}
+
 .jobCompany:hover
 {
+  transition: 0.3s;
   color: var(--color-grey-primary);
 }
 
@@ -460,17 +400,16 @@ h1{
 
 .tagItem {
   display: inline-block;
-  /* background-color: var(--color-black); */
-  /* color: var(--color-grey-primary); */
   padding: 4px 8px;
   border-radius: 4px;
   margin-right: 6px;
-  box-shadow: 1px 1px 1px 1px var(--color-grey-secondary);
-
+  box-shadow: 5px 4px 4px 2px var(--color-grey-darker);
+  transition: 0.1s;
 }
 
 .tagItem:hover
 {
+  transition: 0.3s;
   color: var(--color-grey-primary);
 }
 
@@ -483,17 +422,18 @@ h1{
 
 .jobview {
   font-size: 1rem;
-  /* background-color: var(--color-black); */
   padding: 3px;
   margin-bottom: 10px;
   color: inherit;
   text-decoration: none;
   border-radius: 4px;
-  box-shadow: 1px 1px 1px 1px var(--color-grey-secondary);
+  box-shadow: 5px 4px 4px 2px var(--color-grey-darker);
   padding: 6px;
+  transition: 0.1s;
 }
 
 .jobview:hover{
+  transition: 0.3s;
   color: var(--color-grey-primary);
 }
 
@@ -543,27 +483,6 @@ h1{
     margin: auto;
   }
 }
-
-
-/* .cards {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.card {
-  flex: 0 0 25%;
-  padding: 10px;
-  box-sizing: border-box;
-}
-
-@media (max-width: 750px) {
-  .card {
-    flex: 0 0 50%;
-  }
-} */
-
-
-
 
 
 
