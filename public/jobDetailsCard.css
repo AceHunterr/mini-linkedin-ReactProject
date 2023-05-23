@@ -1,0 +1,86 @@
+:root {
+    /* fonts */
+    --font-inter: Inter;
+  
+    /* font sizes */
+    --font-size-11xl: 30px;
+    --font-size-8xl: 27px;
+    --font-size-41xl: 60px;
+    --font-size-16xl: 35px;
+  
+    /* Colors */
+    --color-black: #000;
+    --color-white: #fff;
+    --color-grey-primary: #dddddd;
+    --color-grey-secondary: #bfbfbf;
+    --color-grey-darker: #7e7e7e;
+  
+    --color-secondary-black: #191919;
+    --color-secondary-black-darker: #121212;
+    --color-red : #E8505B;
+    --color-blue : #4E95FE;
+    --color-yellow : #FFD966;
+    --color-purple: #632F93;
+    --color-green : #00D085;
+    
+    /* border radiuses */
+    --br-5xs: 8px;
+    --br-mini: 15px;
+  }
+  
+
+
+.job-detail-card
+{
+    position: relative;
+    margin: auto;
+    width: 80%;
+    height: 400px;
+    border-radius: 30px;
+    box-shadow: 0 5px 20px white;
+    background-color : transparent;
+}
+
+.job-detail-card .imgbox{
+    position: relative;
+    width: 20%;
+    height: 20%;
+    margin: auto;
+    transform: translateY(-7.2rem);
+}
+
+.job-detail-card img{
+    width: 100%;
+    border-radius: 100%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    aspect-ratio: 1/1;
+    
+}
+
+@media(max-width:1150px){
+    .job-detail-card .imgbox{
+        transform: translateY(-4.5rem);
+        height: 25%;
+        width: 25%;
+    }
+  }
+
+@media(max-width:900px){
+    .job-detail-card .imgbox{
+        transform: translateY(-3.5rem);
+        height: 30%;
+        width: 30%;
+    }
+    
+  }
+
+@media(max-width:450px){
+    .job-detail-card .imgbox{
+        transform: translateY(-2rem);
+        height: 40%;
+        width: 40%;
+    }
+    
+  }
