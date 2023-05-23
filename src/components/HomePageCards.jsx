@@ -1,6 +1,10 @@
 import React, { useState } from 'react'
 import myImg from "../static/images/img.jpg"
 import { useNavigate } from 'react-router-dom';
+// import { ReactComponent as FreelancerSvg } from '../static/images/freelancer.svg';
+// import { ReactComponent as JobSeekerSvg } from '../static/images/job_seeker.svg';
+// import { ReactComponent as InternshipSvg } from '../static/images/internship.svg';
+// import { ReactComponent as EmployerSvg } from '../static/images/employer.svg';
 
 
 const HomePageCards = () => {
@@ -21,21 +25,25 @@ const HomePageCards = () => {
         {
             title:'Employer',
             img_src : myImg,
+            // svg : <FreelancerSvg />,
             handleclick : navigatetoJobDetails
         },
         {
             title:'Internship',
             img_src : myImg,
+            // svg : <InternshipSvg />,
             handleclick : navigatetointernships
         },
         {
             title:'Job Seeker',
             img_src : myImg,
+            // svg : <JobSeekerSvg />,
             handleclick : navigatetoJobDetails
         },
         {
             title:'Freelancer',
             img_src : myImg,
+            // svg : <FreelancerSvg />,
             handleclick : navigatetofreelancer
         },
 
@@ -49,6 +57,7 @@ const HomePageCards = () => {
               {cards.map((card, i) => ( 
                 <div key={i} className="card" onClick={card.handleclick}>
                   <img src={card.img_src} alt="Img" />
+                  {card.svg}
                   <h1>{card.title}</h1>
                 </div>
               ))}

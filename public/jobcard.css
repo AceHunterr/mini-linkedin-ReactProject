@@ -43,6 +43,7 @@
     max-width: 30rem;
     max-height: 50rem;
     transition: 0.3s;
+    color: var(--color-secondary-black);
   }
   
   .jobCard:hover {
