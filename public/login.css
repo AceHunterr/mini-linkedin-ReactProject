@@ -1,0 +1,105 @@
+
+.signup-container {
+    max-width: 50%;
+    padding: 20px;
+    background-color: var(--color-secondary-black-darker);
+    border-radius: 5px;
+  }
+  
+  .signup-container span {
+    font-size: 32px;
+  
+  }
+  
+  .signup-container h2{
+    font-size: 1.4rem;
+    font-weight: 100;
+    text-decoration: none;
+    padding-bottom: 6px;
+    padding-top: 15px;
+  }
+  
+  .signup-container form {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  
+  }
+  
+  .signup-container .form-group {
+    margin-bottom: 15px;
+    position: relative;
+    width: 100%;
+  }
+  
+  .signup-container label {
+    position: absolute;
+    top: 80%;
+    left: 10px;
+    transform: translateY(-50%);
+    transition: 0.3s;
+    pointer-events: none;
+    color: #888;
+  }
+  
+  .signup-container input {
+    width: 100%;
+    padding: 8px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+  }
+  
+  .signup-container input:focus~label,
+  .signup-container input:valid~label {
+    top: 60px;
+    font-size: 10px;
+    background-image: linear-gradient(to right, #8F4DC5,  #ff3988, #ff31a3, #ff29bf,#FE2198);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+  }
+  
+  .signup-container button[type="submit"] {
+  
+    width: 30%;
+    margin: auto;
+    -webkit-border-radius: 17;
+    -moz-border-radius: 17;
+    border-radius: 10px;
+    font-family: Arial;
+    color: #ffffff;
+    font-size: 18px;
+    background: var(--color-secondary-black);
+    padding: 10px 20px 10px 20px;
+    border: solid #4e0983 3px;
+    transition: background-color 0.3s ease;
+    background-origin: border-box;
+    text-decoration: none;
+  }
+  
+  .signup-container button[type="submit"]:hover {
+    background: #8e0279;
+    background-image: -webkit-linear-gradient(top, #8e0279, #380066);
+    background-image: -moz-linear-gradient(top, #8e0279, #380066);
+    background-image: -ms-linear-gradient(top, #8e0279, #380066);
+    background-image: -o-linear-gradient(top, #8e0279, #380066);
+    background-image: linear-gradient(to bottom, #8e0279, #380066);
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  .signup-container p {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .signup-container a {
+    background-image: linear-gradient(to right, #8F4DC5,#FE2198);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    text-decoration: none;
+  }
