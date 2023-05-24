@@ -21,6 +21,14 @@ const Internships = () => {
                         view={contents.view}
                         share={contents.share}
                         tags = {contents.tags}
+                        description = {contents.description}
+                        mode = {contents.mode}
+                        location = {contents.location}
+                        days = {contents.date_posted}
+                        salary = {contents.salary}
+                        job_type = {contents.job_type}
+                        position = {contents.position}
+
                         work_type = "work_type_internships"
                         style={{ flex: '1 10 50%', maxWidth: '50%'  }}
                     />

@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom';
 export function JobCard(props) {
     const navigate = useNavigate()
     const navigatetoJobDetails = () => {
-        navigate('/job-details'); 
+        navigate('/job-details', { state: { jobProps: props } }); 
       };
       
     const navigatetoTagsPage = () => {
