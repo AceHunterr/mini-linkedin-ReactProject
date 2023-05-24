@@ -53,6 +53,16 @@
     color: var(--color-blue);
   }
 
+  .work_type_job_button{
+    background-color: var(--color-green);
+  }
+  .work_type_internships_button{
+    background-color: var(--color-red);
+  }
+  .work_type_freelancer_button{
+    background-color: var(--color-blue);
+  }
+
 .job-detail-card
 {
     position: relative;
@@ -169,6 +179,44 @@
   }
 
 
+  .apply-now-div{
+    width: 90%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 10px;
+  }
+
+  .apply-now{
+  
+    width: 30%;
+    margin: auto;
+    -webkit-border-radius: 17;
+    -moz-border-radius: 17;
+    border-radius: 10px;
+    font-family: Arial;
+    color: #ffffff;
+    font-size: 18px;
+    /* background: var(--color-secondary-black); */
+    padding: 10px 20px 10px 20px;
+    border: solid var(--color-secondary-black) 3px;
+    transition: background-color 0.3s ease;
+    background-origin: border-box;
+    text-decoration: none;
+  }
+  
+  .apply-now:hover{
+    background: #8e0279;
+    background-image: -webkit-linear-gradient(top, #8e0279, #380066);
+    background-image: -moz-linear-gradient(top, #8e0279, #380066);
+    background-image: -ms-linear-gradient(top, #8e0279, #380066);
+    background-image: -o-linear-gradient(top, #8e0279, #380066);
+    background-image: linear-gradient(to bottom, #8e0279, #380066);
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
 
   
 
@@ -192,7 +240,7 @@
 
 @media(max-width:700px){
     .job-detail-card{
-        height: 30%;
+        height: 18%;
     }
     .job-detail-card .imgbox{
         transform: translateY(-4.2rem);
@@ -214,11 +262,21 @@
       .dot {
         display: none; 
       }
+
+      .icons-row {
+        flex-direction: column; 
+        align-items: center; 
+      }
+    
+    .icons-row .item {
+        text-align: center; 
+        margin-bottom: 20px;
+      }
   }
 
 @media(max-width:480px){
     .job-detail-card{
-        height: 35%;
+        height: 20%;
     }
     .job-detail-card .imgbox{   
         transform: translateY(-2.6rem);

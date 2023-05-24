@@ -4,7 +4,7 @@ const LoginUpForm = () => {
   return (
     <>
   <div class="signup-container">
-    <span>Sign Up</span>
+    <span>Login</span>
     <form>
       <div class="form-group">
         <h2>Email</h2>

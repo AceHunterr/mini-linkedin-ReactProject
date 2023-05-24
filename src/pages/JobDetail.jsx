@@ -27,7 +27,7 @@ const JobDetail = () => {
     salary : "0k",
     job_type: "No Time",
     position : "No Position",
-    work_type : "work_type_job"
+    work_type : ""
   };
 
 
@@ -53,19 +53,19 @@ const JobDetail = () => {
 
       <div className="content">
         <h2 className="job-heading">{jobProps.job_title}</h2>
-        <div class="row">
-          <div class="item">{jobProps.mode}</div>
-          <div class="dot"></div>
-          <div class="item">{jobProps.location}</div>
-          <div class="dot"></div>
-          <div class="item">{jobProps.days}</div>
+        <div className="row">
+          <div className="item">{jobProps.mode}</div>
+          <div className="dot"></div>
+          <div className="item">{jobProps.location}</div>
+          <div className="dot"></div>
+          <div className="item">{jobProps.days}</div>
         </div>
       </div>
       
     </div>
 
-    <div class="icons-row">
-      <div class="item">
+    <div className="icons-row">
+      <div className="item">
         <img src={salaryImg} alt="salary-img" className='icon-img'/>
         <h4 className="icon-text">Salary</h4>
         <h4 className="icon-value">{jobProps.salary}</h4>
@@ -88,9 +88,13 @@ const JobDetail = () => {
     <div className="job-details-description">
       <h2 className='heading'>Description</h2>
       <p className="content">{jobProps.description}</p>
+      
     </div>
 
-
+    <div className="apply-now-div">
+      <button className={`${customClassName}_button  apply-now`}>Apply Now</button>
+      {/* <button className='apply-now'>Apply Now</button> */}
+    </div>
 
     </Box>
     </Box>
