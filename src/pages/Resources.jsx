@@ -11,7 +11,7 @@ const Resources = () => {
     <Sidenav />
     <Box component="main" sx={{ flexGrow: 1, p: 3}}>
       <div className="job-detail-header-div">
-        <h2 className='works-text freelancer-text job-detail-heading'>Resources</h2>
+        <h2 className='freelancer-text job-detail-heading'>Resources</h2>
       </div>
       <ResourceList files={files} />
     

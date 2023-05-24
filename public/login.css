@@ -51,6 +51,16 @@
     border: 1px solid #ccc;
     border-radius: 3px;
   }
+
+  .signup-container textarea{
+    width: 100%;
+    padding: 8px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+
+  }
+
   
   .signup-container input:focus~label,
   .signup-container input:valid~label {
@@ -61,6 +71,16 @@
     -webkit-background-clip: text;
     color: transparent;
   }
+  
+  .signup-container textarea:focus~label{
+    top: 60px;
+    font-size: 10px;
+    background-image: linear-gradient(to right, #8F4DC5,  #ff3988, #ff31a3, #ff29bf,#FE2198);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+  }
+  
   
   .signup-container button[type="submit"] {
   

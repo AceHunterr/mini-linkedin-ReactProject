@@ -11,7 +11,7 @@ const Jobs = () => {
     <Box component="main" sx={{ flexGrow: 1, p: 3}}>
     {/* <h2 className='main-intro-text works-text jobs-text'>JOBS</h2> */}
     <div className="job-detail-header-div">
-      <h2 className='works-text jobs-text job-detail-heading'>Jobs</h2>
+      <h2 className='jobs-text job-detail-heading'>Jobs</h2>
     </div>
 
       <div className='jobcard-container' style={{ display: 'flex', flexWrap: 'wrap',justifyContent: 'center',gap:'50px'}}>

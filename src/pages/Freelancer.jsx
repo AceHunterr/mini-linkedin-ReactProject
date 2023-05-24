@@ -12,7 +12,7 @@ const Freelancer = () => {
 
 
     <div className="job-detail-header-div">
-      <h2 className='works-text freelancer-text job-detail-heading'>Freelancer</h2>
+      <h2 className='freelancer-text job-detail-heading'>Freelancer</h2>
     </div>
 
       <div className='jobcard-container' style={{ display: 'flex', flexWrap: 'wrap',justifyContent: 'center',gap:'50px'}}>
