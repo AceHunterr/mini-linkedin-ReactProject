@@ -1,15 +1,19 @@
 import React,{} from 'react';
 import Box from '@mui/material/Box';
 import Sidenav from '../components/sidenav';
+import ResourceList from '../components/resourcesList';
+import files from '../resourcesContent';
 
 const Resources = () => {
+  
   return (
     <Box sx={{display:"flex"}}> 
     <Sidenav />
     <Box component="main" sx={{ flexGrow: 1, p: 3}}>
-      {/* Add your home page content here */}
-
-      <h2>Resources</h2>
+      <div className="job-detail-header-div">
+        <h2 className='works-text freelancer-text job-detail-heading'>Resources</h2>
+      </div>
+      <ResourceList files={files} />
     
 
     </Box>

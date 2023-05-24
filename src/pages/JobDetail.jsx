@@ -39,7 +39,7 @@ const JobDetail = () => {
     <Box component="main" sx={{ flexGrow: 1, p: 3}}>
 
     <div className="job-detail-header-div">
-    <span className={`${customClassName}_detail  job-detail-heading`}>{jobProps.company}</span>
+      <span className={`${customClassName}_detail  job-detail-heading`}>{jobProps.company}</span>
     </div>
     <br />
     <br />

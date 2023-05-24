@@ -1,0 +1,45 @@
+.resources-heading{
+    
+}
+
+.icon-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 icons per row */
+    grid-gap: 20px; /* Adjust the desired spacing between icons */
+  
+    @media screen and (max-width: 600px) {
+      grid-template-columns: repeat(2, 1fr); /* 2 icons per row */
+    }
+  }
+  
+  .file-icon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    
+  }
+  
+  .file-icon-img {
+    width: 5rem;
+    height: 6rem; 
+    transition: 0.3s;
+    /* background-color: var(--color-secondary-black-darker); */
+  }
+
+  .file-icon-img:hover {
+    box-shadow: 4px 4px 8px var(--color-grey-primary); 
+    transform: scale(1.1); 
+    cursor: pointer; 
+  }
+
+  .file-name {
+    margin-top: 15px; 
+    transition: 0.3s;
+}
+
+  .file-icon-img:hover ~ .file-name {
+    transform: scale(1.1); /* Adjust the desired scale value */
+  }
+  
+  

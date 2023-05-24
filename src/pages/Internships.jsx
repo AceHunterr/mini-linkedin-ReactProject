@@ -9,7 +9,11 @@ const Internships = () => {
     <Box sx={{display:"flex"}}> 
     <Sidenav />
     <Box component="main" sx={{ flexGrow: 1, p: 3}}>
-    <h2 className='main-intro-text works-text internships-text'>Internships</h2>
+    {/* <h2 className='main-intro-text works-text internships-text'>Internships</h2> */}
+
+    <div className="job-detail-header-div">
+      <h2 className='works-text internships-text job-detail-heading'>Interships</h2>
+    </div>
 
       <div className='jobcard-container' style={{ display: 'flex', flexWrap: 'wrap',justifyContent: 'center',gap:'50px'}}>
                 {internshipData.map(contents => (
