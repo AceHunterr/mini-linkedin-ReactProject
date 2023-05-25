@@ -176,7 +176,7 @@
 
   .apply-now{
   
-    width: 30%;
+    width: 50%;
     margin: auto;
     -webkit-border-radius: 17;
     -moz-border-radius: 17;
@@ -222,6 +222,9 @@
     .job-detail-card .job-heading{
         transform: translateY(-2.5rem);
     }
+    .apply-now{
+      width: 80%;
+    }
 }
 
 @media(max-width:700px){
@@ -257,6 +260,9 @@
     .icons-row .item {
         text-align: center; 
         margin-bottom: 20px;
+      }
+      .apply-now{
+        width: 100%;
       }
   }
 

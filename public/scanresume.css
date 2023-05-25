@@ -1,0 +1,16 @@
+#resume-button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 0px;
+    
+  }
+  
+  #resume-button.icon {
+    margin-right: 10px;
+  }
+  
+  #resume-button.text {
+    font-weight: bold;
+  }
+  
