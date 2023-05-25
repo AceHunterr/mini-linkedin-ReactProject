@@ -9,8 +9,12 @@ import { useNavigate } from 'react-router-dom';
 
 const HomePageCards = () => {
   const navigate = useNavigate()
+  
   const navigatetointernships = () => {
     navigate('/internships'); 
+  };
+  const navigatetoEmployerRegistration = () => {
+    navigate('/employer-registration'); 
   };
   const navigatetofreelancer = () => {
     navigate('/freelancer'); 
@@ -26,10 +30,10 @@ const HomePageCards = () => {
             title:'Employer',
             img_src : myImg,
             // svg : <FreelancerSvg />,
-            handleclick : navigatetoJobDetails
+            handleclick : navigatetoEmployerRegistration
         },
         {
-            title:'Internship',
+            title:'Internships',
             img_src : myImg,
             // svg : <InternshipSvg />,
             handleclick : navigatetointernships
