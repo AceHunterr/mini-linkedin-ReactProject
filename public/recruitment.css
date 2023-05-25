@@ -1,0 +1,75 @@
+#post-button{
+    width: 30%;
+    margin-left: auto;
+    margin-right: 0;
+    background: var(--color-blue);
+    border: none;
+    transition: background-color 0.3s ease;
+  }
+  
+  
+#post-button:hover {
+    background: #8e0279;
+    background-image: -webkit-linear-gradient(top, #8e0279, #380066);
+    background-image: -moz-linear-gradient(top, #8e0279, #380066);
+    background-image: -ms-linear-gradient(top, #8e0279, #380066);
+    background-image: -o-linear-gradient(top, #8e0279, #380066);
+    background-image: linear-gradient(to bottom, #8e0279, #380066);
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+
+  .signup-container form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+  }
+  
+  .phone-input {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    position: relative;
+    margin-bottom: 15px;
+  }
+  
+#phone-number-label{
+ 
+    position: absolute;
+    top: 50%;
+    left: 100px;
+    transform: translateY(-50%);
+    transition: 0.3s;
+    pointer-events: none;
+    color: #888;
+}
+
+.signup-container input:focus~label#phone-number-label,
+.signup-container input:valid~label#phone-number-label{
+  top: 5px;
+  font-size: 10px;
+  background-image: linear-gradient(to right, #8F4DC5,  #ff3988, #ff31a3, #ff29bf,#FE2198);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+  /* .phone-input label {
+    margin-left: 86px;
+    margin-bottom: 100px;
+    transform: translateY(-80%);
+      
+  } */
+  
+  .phone-input select {
+    margin-right: 8px;
+    width: 80px;
+  }
+  
+  .phone-input input {
+    margin-right: 8px;
+  }
+  
+    

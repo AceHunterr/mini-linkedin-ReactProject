@@ -16,6 +16,7 @@ import JobDetail from "./pages/JobDetail";
 import tagsPage from "./pages/tagsPage";
 import Internships from "./pages/Internships";
 import Freelancer from "./pages/Freelancer";
+import EmployerRegistration from "./pages/EmployerRegistration";
 
 const App = () => {
     return (
@@ -39,6 +40,7 @@ const App = () => {
             <Route path="/tags" exact element={<tagsPage />}></Route>
             <Route path="/internships" exact element={<Internships/>}></Route>
             <Route path="/freelancer" exact element={<Freelancer />}></Route>
+            <Route path="/employer-registration" exact element={<EmployerRegistration />}></Route>
           </Routes>
         </BrowserRouter>
         {/* <Sidenav /> */}

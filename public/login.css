@@ -1,6 +1,5 @@
-
 .signup-container {
-    max-width: 50%;
+    max-width: 70%;
     padding: 20px;
     background-color: var(--color-secondary-black-darker);
     border-radius: 5px;
@@ -83,22 +82,26 @@
   
   
   .signup-container button[type="submit"] {
-  
-    width: 30%;
-    margin: auto;
-    -webkit-border-radius: 17;
-    -moz-border-radius: 17;
+    /* Remove the fixed width and set it to auto */
+    width: auto;
+    /* Adjust the margin to center the button */
+    margin-left: auto;
+    margin-right: auto;
+    /* Rest of the styles remain the same */
+    -webkit-border-radius: 17px;
+    -moz-border-radius: 17px;
     border-radius: 10px;
     font-family: Arial;
     color: #ffffff;
     font-size: 18px;
     background: var(--color-secondary-black);
-    padding: 10px 20px 10px 20px;
+    padding: 10px 20px;
     border: solid #4e0983 3px;
     transition: background-color 0.3s ease;
     background-origin: border-box;
     text-decoration: none;
   }
+  
   
   .signup-container button[type="submit"]:hover {
     background: #8e0279;
@@ -123,3 +126,16 @@
     color: transparent;
     text-decoration: none;
   }
+
+  @media(max-width:1000px){
+    .signup-container{
+      max-width: 85%;
+    }
+  }
+
+  @media(max-width:500px){
+    .signup-container{
+      max-width: 100%;
+    }
+  }
+

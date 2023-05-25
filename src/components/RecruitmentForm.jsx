@@ -31,10 +31,12 @@ const RecruitmentForm = () => {
         <textarea id="myTextarea" rows="4" cols="100"></textarea>
         <label for="email">Job Description</label>
       </div>
-
-      
-      
-      <button type="submit">Login</button>
+      <div className="form-group">
+            <h2>Upload Image</h2>
+            <input type="file" id="image" accept="image/*" />
+            <label htmlFor="image"></label>
+          </div>
+      <button type="submit" id='post-button'>Post</button>
     </form>
 
   </div>

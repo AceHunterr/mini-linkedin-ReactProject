@@ -64,6 +64,9 @@ body{
   text-align: center;
 }
 
+#recruitment-text{
+  padding-bottom: 0%;
+}
 
 /* Media Queries */
 
@@ -90,6 +93,7 @@ body{
   .signup-container{
     max-width: 80%;
   }
+
 }
 
 
