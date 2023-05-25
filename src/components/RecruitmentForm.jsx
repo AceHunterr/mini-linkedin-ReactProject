@@ -32,7 +32,7 @@ const RecruitmentForm = () => {
         <label for="email">Job Description</label>
       </div>
       <div className="form-group">
-            <h2>Upload Image</h2>
+            <h2>Company Logo</h2>
             <input type="file" id="image" accept="image/*" />
             <label htmlFor="image"></label>
           </div>

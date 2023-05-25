@@ -10,7 +10,9 @@ const EmployerRegistration = () => {
     <Box component="main" sx={{ flexGrow: 1, p: 3}}>
       {/* Add your home page content here */}
 
-      <h2>Employer Registration</h2>
+      <div className="job-detail-header-div">
+      <h2 className='job-detail-heading' id='employer-registration-text'>Employer Registration</h2>
+    </div>
     <EmployerForm />
 
     </Box>

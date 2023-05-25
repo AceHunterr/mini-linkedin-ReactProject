@@ -68,6 +68,11 @@ body{
   padding-bottom: 0%;
 }
 
+#employer-registration-text{
+  padding-bottom: 0%;
+  color: var(--color-yellow);
+}
+
 /* Media Queries */
 
 

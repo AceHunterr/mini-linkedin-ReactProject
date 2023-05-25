@@ -81,7 +81,7 @@
   }
   
   
-  .signup-container button[type="submit"] {
+  .signup-container button {
     /* Remove the fixed width and set it to auto */
     width: auto;
     /* Adjust the margin to center the button */
@@ -103,7 +103,7 @@
   }
   
   
-  .signup-container button[type="submit"]:hover {
+  .signup-container button:hover {
     background: #8e0279;
     background-image: -webkit-linear-gradient(top, #8e0279, #380066);
     background-image: -moz-linear-gradient(top, #8e0279, #380066);

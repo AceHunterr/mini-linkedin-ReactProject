@@ -58,7 +58,10 @@ const EmployerForm = () => {
           </div>
 
         
-        <button type="submit" id='post-button'>Post</button>
+          <div class="employer-form-button-container">
+            <button type="reset" class="post-button" id='reset-btn'>Reset</button>
+            <button type="submit" class="post-button" id='post-btn'>Post</button>
+          </div>
       </form>
   
     </div>
