@@ -64,13 +64,22 @@ body{
   text-align: center;
 }
 
-#recruitment-text{
+.padding-bottom-zero{
   padding-bottom: 0%;
 }
 
+
 #employer-registration-text{
-  padding-bottom: 0%;
   color: var(--color-yellow);
+}
+
+.divider-line{
+  width: 80%;
+  margin: auto;
+  height: 10px;
+  border-radius: 10px;
+  background-color: var(--color-secondary-black);
+  border: none;
 }
 
 /* Media Queries */

@@ -11,7 +11,7 @@ const EmployerRegistration = () => {
       {/* Add your home page content here */}
 
       <div className="job-detail-header-div">
-      <h2 className='job-detail-heading' id='employer-registration-text'>Employer Registration</h2>
+      <h2 className='job-detail-heading padding-bottom-zero' id='employer-registration-text'>Employer Registration</h2>
     </div>
     <EmployerForm />
 

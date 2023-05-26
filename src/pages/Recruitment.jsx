@@ -10,7 +10,7 @@ const Recruitment = () => {
     <Box component="main" sx={{ flexGrow: 1, p: 3}}>
       {/* Add your home page content here */}
       <div className="job-detail-header-div">
-      <h2 className="freelancer-text job-detail-heading" id="recruitment-text">Recruitment</h2>
+      <h2 className="freelancer-text job-detail-heading padding-bottom-zero">Recruitment</h2>
       </div>
 
       <RecruitmentForm />    

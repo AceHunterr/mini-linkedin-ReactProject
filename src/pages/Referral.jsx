@@ -61,6 +61,7 @@ const Referral = () => {
           <p>Share your referral link and earn 20 coins</p>
         </div>
 
+        <hr className='divider-line' />
 
       </Box>
     </Box>

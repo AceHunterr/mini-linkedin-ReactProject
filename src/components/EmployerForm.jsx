@@ -5,7 +5,6 @@ const EmployerForm = () => {
         { country: 'India', code: '+91' },
         { country: 'United States', code: '+1' },
         { country: 'United Kingdom', code: '+44' },
-        // Add more country codes as needed
       ];
       
   return (
@@ -49,10 +48,10 @@ const EmployerForm = () => {
                 {phoneCodes.map((phoneCode, index) => (
                   <option key={index} value={phoneCode.code}>
                     {phoneCode.code} {phoneCode.country} 
-                  </option>
+                  </option> 
                 ))}
               </select>
-              <input type="text" required />
+              <input type="number" required />
               <label class="phone-label" htmlFor="phoneNumber" id='phone-number-label'>Phone Number</label>
             </div>
           </div>
