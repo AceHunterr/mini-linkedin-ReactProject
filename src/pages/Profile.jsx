@@ -12,7 +12,7 @@ const Profile = () => {
       {/* Add your home page content here */}
 
       <div className="job-detail-header-div">
-        <h2 className="freelancer-text job-detail-heading padding-bottom-zero gradient-text">Profile</h2>
+        <h2 className="freelancer-text job-detail-heading padding-bottom-zero gradient-text-blue">Profile</h2>
       </div>
         <ProfileForm />
     

@@ -1,7 +1,17 @@
+import React, { useState } from 'react';
 import { FaRegBookmark} from 'react-icons/fa';
 import { useNavigate } from 'react-router-dom';
 
 export function JobCard(props) {
+  console.log(props)
+
+  const [isSaved, setIsSaved] = useState(false);
+
+  const handleBookmarkClick = () => {
+    setIsSaved(!isSaved);
+    props.onSaveCard(props); // Pass the card details to the parent component
+  };
+
     const navigate = useNavigate()
     const navigatetoJobDetails = () => {
         navigate('/job-details', { state: { jobProps: props } }); 
@@ -19,7 +29,7 @@ export function JobCard(props) {
           <div className='jobCard__header' onClick={navigatetoJobDetails}>
             <img src={props.image} alt='job-img' className='jobImage' />
             <h3 className='jobName '>{props.job_title}</h3>
-            <FaRegBookmark className='jobCard__wishlist' />
+            <FaRegBookmark className={`jobCard__wishlist ${isSaved ? 'saved' : ''}`} onClick={handleBookmarkClick} />
           </div>
           <h3 className='jobCompany'>{props.company}</h3>
           <div className='displayStack__1'>

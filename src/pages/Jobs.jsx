@@ -1,22 +1,38 @@
-import React,{} from 'react';
-import Box from '@mui/material/Box';
-import Sidenav from '../components/sidenav';
-import { JobCard } from '../components/jobsCards';
-import jobData from '../jobsContent';
+  import React,{useState} from 'react';
+  import Box from '@mui/material/Box';
+  import Sidenav from '../components/sidenav';
+  import { JobCard } from '../components/jobsCards';
+  import jobData from '../jobsContent';
 
-const Jobs = () => {
-  return (
-    <Box sx={{display:"flex"}}> 
-    <Sidenav />
-    <Box component="main" sx={{ flexGrow: 1, p: 3}}>
-    {/* <h2 className='main-intro-text works-text jobs-text'>JOBS</h2> */}
-    <div className="job-detail-header-div">
-      <h2 className='jobs-text job-detail-heading'>Jobs</h2>
-    </div>
+  const Jobs = () => {
 
-      <div className='jobcard-container' style={{ display: 'flex', flexWrap: 'wrap',justifyContent: 'center',gap:'50px'}}>
-                {jobData.map(contents => (
-                    <JobCard
+    const [savedCards, setSavedCards] = useState([]);
+
+    const handleSaveCard = (card) => {
+      const isCardSaved = savedCards.some((savedCard) => savedCard.id === card.id);
+
+      if (isCardSaved) {
+        const updatedCards = savedCards.filter((savedCard) => savedCard.id !== card.id);
+        setSavedCards(updatedCards);
+      } else {
+        const updatedCards = [...savedCards, card];
+        setSavedCards(updatedCards);
+      }
+    };
+
+    return (
+      <Box sx={{display:"flex"}}> 
+      <Sidenav />
+      <Box component="main" sx={{ flexGrow: 1, p: 3}}>
+      {/* <h2 className='main-intro-text works-text jobs-text'>JOBS</h2> */}
+      <div className="job-detail-header-div">
+        <h2 className='jobs-text job-detail-heading'>Jobs</h2>
+      </div>
+
+        <div className='jobcard-container' style={{ display: 'flex', flexWrap: 'wrap',justifyContent: 'center',gap:'50px'}}>
+                  {jobData.map(contents => (
+                      <JobCard
+
                         key={contents.id}
                         image={contents.image}
                         job_title={contents.job_title}
@@ -32,6 +48,7 @@ const Jobs = () => {
                         job_type = {contents.job_type}
                         position = {contents.position}
                         work_type = "work_type_job"
+                        onSaveCard={handleSaveCard} 
                         style={{ flex: '1 10 50%', maxWidth: '50%'  }}
                     />
                 ))}

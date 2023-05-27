@@ -48,6 +48,18 @@ body{
   color: var(--color-white);
 }
 
+.gradient-text {
+  background-image: linear-gradient(to right, #8F4DC5, #FE2198);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gradient-text-blue {
+  background-image: linear-gradient(to right, #E40ACF, #192CD4);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 /* To centering the headings */
 .job-detail-header-div {
   display: flex;
@@ -64,6 +76,7 @@ body{
   text-align: center;
 }
 
+/* Adjusting Spaces */
 .padding-bottom-zero{
   padding-bottom: 0%;
 }

@@ -1,10 +1,25 @@
-import React,{} from 'react';
+import React,{useState} from 'react';
 import Box from '@mui/material/Box';
 import Sidenav from '../components/sidenav';
 import { JobCard } from '../components/jobsCards';
 import freelancerData from '../freelancerContent';
 
 const Freelancer = () => {
+
+  const [savedCards, setSavedCards] = useState([]);
+
+  const handleSaveCard = (card) => {
+    const isCardSaved = savedCards.some((savedCard) => savedCard.id === card.id);
+
+    if (isCardSaved) {
+      const updatedCards = savedCards.filter((savedCard) => savedCard.id !== card.id);
+      setSavedCards(updatedCards);
+    } else {
+      const updatedCards = [...savedCards, card];
+      setSavedCards(updatedCards);
+    }
+  };
+
   return (
     <Box sx={{display:"flex"}}> 
     <Sidenav />
@@ -33,6 +48,7 @@ const Freelancer = () => {
                         job_type = {contents.job_type}
                         position = {contents.position}
                         work_type = "work_type_freelancer"
+                        onSaveCard={handleSaveCard} 
                         style={{ flex: '1 10 50%', maxWidth: '50%'  }}
                     />
                 ))}
