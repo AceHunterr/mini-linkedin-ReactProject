@@ -10,7 +10,7 @@ const TrainingPrograms = () => {
       {/* Add your home page content here */}
 
       <div className="job-detail-header-div">
-        <h2 className='job-detail-heading'>Training Programs</h2>
+        <h2 className='job-detail-heading gradient-text-blue'>COMING SOON</h2>
       </div>
     
 

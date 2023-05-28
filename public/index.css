@@ -77,12 +77,20 @@ body{
 }
 
 /* Adjusting Spaces */
+/* !!!!!!!!!!!!!! These needed to be put below the job-detail-heading only to adjust the spaces else the padding bottom will be overridden by job-detail-heading!!!!!!! */
 .padding-bottom-zero{
   padding-bottom: 0%;
+}
+.padding-bottom-four{
+  padding-bottom: 4%;
 }
 
 
 #employer-registration-text{
+  color: var(--color-yellow);
+}
+
+.yellow-text{
   color: var(--color-yellow);
 }
 
