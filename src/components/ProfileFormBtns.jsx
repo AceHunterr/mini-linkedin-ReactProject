@@ -19,7 +19,7 @@ import { Button } from '@mui/material';
 //     },
 //   });
 
-const ProfileFormBtns = () => {
+const ProfileFormBtns = () => { 
     // const classes = useStyles();
 
   return (

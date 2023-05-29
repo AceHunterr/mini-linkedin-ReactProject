@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
+import DensityMediumIcon from '@mui/icons-material/DensityMedium';
 
 const FilterCategories = ({ onFilter }) => {
   const initialFilterValues = {
     jobTitle: '',
     company: '',
     location: '',
+    tags:'',
   };
 
   const [filterValues, setFilterValues] = useState(initialFilterValues);
@@ -34,47 +36,58 @@ const FilterCategories = ({ onFilter }) => {
 
   return (
     <div>
-      <button onClick={togglePopup}>Filter Categories</button>
+    <div className="filter-btn-row">
+      <button onClick={togglePopup} className='profile-footer-btn'><DensityMediumIcon fontSize="small"/>Filter</button>
+    </div>
       {isOpen && (
-        <div className="popup">
-          <div className="popup-content">
-            <h2>Filter Categories</h2>
+        <div className="filter-popup">
+          <div className="filter-popup-content">
+            
             <div>
-              <label>
-                Job Title:
+              
+              <h2>Opputunity Type</h2>
                 <input
                   type="text"
                   name="jobTitle"
                   value={filterValues.jobTitle}
                   onChange={handleChange}
                 />
-              </label>
+              
             </div>
             <div>
-              <label>
-                Company:
+              <h2>Workplace</h2>
+                
                 <input
                   type="text"
                   name="company"
                   value={filterValues.company}
                   onChange={handleChange}
                 />
-              </label>
+              
             </div>
             <div>
-              <label>
-                Location:
+              <h2>Location</h2>
                 <input
                   type="text"
                   name="location"
                   value={filterValues.location}
                   onChange={handleChange}
                 />
-              </label>
             </div>
-            <button onClick={handleFilter}>Apply Filters</button>
-            <button onClick={handleReset}>Reset</button>
-            <button onClick={togglePopup}>Close</button>
+            <div>
+              <h2>Domain</h2>
+              <input
+                type="text"
+                name="tags"
+                value={filterValues.tags}
+                onChange={handleChange}
+              />
+            </div>
+            <div className="filter-options-btns-row">
+            <button onClick={handleFilter} className='filter-option-btn'>Apply Filters</button>
+            <button onClick={handleReset} className='filter-option-btn'>Reset</button>
+            <button onClick={togglePopup} className='filter-option-btn'>Close</button>
+            </div>
           </div>
         </div>
       )}
