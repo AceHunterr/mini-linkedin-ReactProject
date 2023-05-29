@@ -3,6 +3,7 @@
   import Sidenav from '../components/sidenav';
   import { JobCard } from '../components/jobsCards';
   import jobData from '../jobsContent';
+  import FilterCategories from '../components/FilterCategories';
 
   const Jobs = () => {
 
@@ -20,6 +21,21 @@
     //   }
     // };
 
+    const [filteredJobs, setFilteredJobs] = useState(jobData);
+  
+  const handleFilter = (filterValues) => {
+    const { jobTitle, company, location } = filterValues;
+    const filtered = jobData.filter((job) => {
+      const titleMatch = job.job_title.toLowerCase().includes(jobTitle.toLowerCase());
+      const companyMatch = job.company.toLowerCase().includes(company.toLowerCase());
+      const locationMatch = job.location.toLowerCase().includes(location.toLowerCase());
+      return titleMatch && companyMatch && locationMatch;
+    });
+    setFilteredJobs(filtered);
+  };
+
+
+
     return (
       <Box sx={{display:"flex"}}> 
       <Sidenav />
@@ -28,9 +44,9 @@
       <div className="job-detail-header-div">
         <h2 className='jobs-text job-detail-heading'>Jobs</h2>
       </div>
-
+      <FilterCategories onFilter={handleFilter} />
         <div className='jobcard-container' style={{ display: 'flex', flexWrap: 'wrap',justifyContent: 'center',gap:'50px'}}>
-                  {jobData.map(contents => (
+                  {filteredJobs.map(contents => (
                       <JobCard
                         key={contents.id}
                         image={contents.image}
