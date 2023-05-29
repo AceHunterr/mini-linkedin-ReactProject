@@ -5,19 +5,19 @@ import { JobCard } from '../components/jobsCards';
 import internshipData from '../internshipsContent';
 
 const Internships = () => {
-  const [savedCards, setSavedCards] = useState([]);
+  // const [savedCards, setSavedCards] = useState([]);
 
-  const handleSaveCard = (card) => {
-    const isCardSaved = savedCards.some((savedCard) => savedCard.id === card.id);
+  // const handleSaveCard = (card) => {
+  //   const isCardSaved = savedCards.some((savedCard) => savedCard.id === card.id);
 
-    if (isCardSaved) {
-      const updatedCards = savedCards.filter((savedCard) => savedCard.id !== card.id);
-      setSavedCards(updatedCards);
-    } else {
-      const updatedCards = [...savedCards, card];
-      setSavedCards(updatedCards);
-    }
-  };
+  //   if (isCardSaved) {
+  //     const updatedCards = savedCards.filter((savedCard) => savedCard.id !== card.id);
+  //     setSavedCards(updatedCards);
+  //   } else {
+  //     const updatedCards = [...savedCards, card];
+  //     setSavedCards(updatedCards);
+  //   }
+  // };
 
   return (
     <Box sx={{display:"flex"}}> 
@@ -46,7 +46,7 @@ const Internships = () => {
                         salary = {contents.salary}
                         job_type = {contents.job_type}
                         position = {contents.position}
-                        onSaveCard={handleSaveCard} 
+                        // onSaveCard={handleSaveCard} 
                         work_type = "work_type_internships"
                         style={{ flex: '1 10 50%', maxWidth: '50%'  }}
                     />

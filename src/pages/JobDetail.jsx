@@ -9,7 +9,17 @@ import positionImg from "../static/images/position_icon.png"
 
 const JobDetail = () => {
   const location = useLocation();
-  // const { jobProps } = location.state;
+//   console.log("hello")
+//   console.log(location)
+//   // const location = useLocation();
+  
+// // const searchParams = new URLSearchParams(location.search);
+// //   const jobProps  = {id: searchParams.get('id'),
+// //   job_title: decodeURIComponent(searchParams.get('job_title')),
+// //   company: decodeURIComponent(searchParams.get('company')),
+// //   work_type: decodeURIComponent(searchParams.get('work_type')),}
+//   const jobProps = location.state.jobProps;
+  
 
   const jobProps = location.state?.jobProps || {
     id: 1,

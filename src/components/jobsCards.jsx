@@ -1,17 +1,29 @@
 import React, { useState } from 'react';
 import { FaRegBookmark} from 'react-icons/fa';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate,Link } from 'react-router-dom';
 
 export function JobCard(props) {
-  console.log(props)
+  // console.log(props) 
 
-  const [isSaved, setIsSaved] = useState(false);
+  // const [isSaved, setIsSaved] = useState(false);
 
-  const handleBookmarkClick = () => {
-    setIsSaved(!isSaved);
-    props.onSaveCard(props); // Pass the card details to the parent component
-  };
+  // const handleBookmarkClick = () => {
+  //   setIsSaved(!isSaved);
+  //   props.onSaveCard(props); 
+  // };
 
+  //   const navigate = useNavigate()
+  //   // const history = useHistory()
+  //   console.log("Here")
+  //   console.log(props)
+  //   const navigatetoJobDetails = () => {
+  //     // navigate(`/job-details?id=${props.id}&job_title=${encodeURIComponent(props.job_title)}&company=${encodeURIComponent(props.company)}&work_type=${encodeURIComponent(props.work_type)}`); 
+  //     // navigate('/job-details', { state: { jobProps: props } });
+  //     navigate('/job-details', { state: { jobProps: { props } } });
+
+  //     // history.push('/job-details', { jobProps: props });
+
+  //   };
     const navigate = useNavigate()
     const navigatetoJobDetails = () => {
         navigate('/job-details', { state: { jobProps: props } }); 
@@ -20,6 +32,8 @@ export function JobCard(props) {
     const navigatetoTagsPage = () => {
         navigate('/tags'); 
       };
+        
+    
 
     const customClassName = props.work_type;
   return (
@@ -29,9 +43,10 @@ export function JobCard(props) {
           <div className='jobCard__header' onClick={navigatetoJobDetails}>
             <img src={props.image} alt='job-img' className='jobImage' />
             <h3 className='jobName '>{props.job_title}</h3>
-            <FaRegBookmark className={`jobCard__wishlist ${isSaved ? 'saved' : ''}`} onClick={handleBookmarkClick} />
           </div>
-          <h3 className='jobCompany'>{props.company}</h3>
+            {/* <FaRegBookmark className={`jobCard__wishlist ${isSaved ? 'saved' : ''}`} onClick={handleBookmarkClick} /> */}
+            <FaRegBookmark className='jobCard__wishlist' />
+            <h3 className='jobCompany'>{props.company}</h3>
           <div className='displayStack__1'>
             <div className='tagsContainer'>
               {props.tags.map((tag, index) => (
