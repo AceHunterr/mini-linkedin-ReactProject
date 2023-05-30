@@ -4,6 +4,7 @@
   import { JobCard } from '../components/jobsCards';
   import jobData from '../jobsContent';
   import FilterCategories from '../components/FilterCategories';
+  import SearchIcon from '@mui/icons-material/Search';
 
   const Jobs = () => {
 
@@ -21,19 +22,35 @@
     //   }
     // };
 
-    const [filteredJobs, setFilteredJobs] = useState(jobData);
-  
+  const [searchQuery, setSearchQuery] = useState('');
+  const [filteredJobs, setFilteredJobs] = useState(jobData);
+
+  const handleSearch = (event) => {
+    const { value } = event.target;
+    setSearchQuery(value);
+
+    const filtered = jobData.filter((job) => {
+      const titleMatch = job.job_title.toLowerCase().includes(value.toLowerCase());
+      const companyMatch = job.company.toLowerCase().includes(value.toLowerCase());
+      const locationMatch = job.location.toLowerCase().includes(value.toLowerCase());
+      return titleMatch || companyMatch || locationMatch;
+    });
+
+    setFilteredJobs(filtered);
+  };
+
   const handleFilter = (filterValues) => {
     const { jobTitle, company, location } = filterValues;
+
     const filtered = jobData.filter((job) => {
       const titleMatch = job.job_title.toLowerCase().includes(jobTitle.toLowerCase());
       const companyMatch = job.company.toLowerCase().includes(company.toLowerCase());
       const locationMatch = job.location.toLowerCase().includes(location.toLowerCase());
       return titleMatch && companyMatch && locationMatch;
     });
+
     setFilteredJobs(filtered);
   };
-
 
 
     return (
@@ -44,6 +61,21 @@
       <div className="job-detail-header-div">
         <h2 className='jobs-text job-detail-heading'>Jobs</h2>
       </div>
+
+
+      <div className="search-bar">
+          <input
+            type="text"
+            value={searchQuery}
+            onChange={handleSearch}
+            placeholder="Search jobs..."
+          />
+          
+            <SearchIcon className="search-icon"/>
+          
+        </div>
+
+
       <FilterCategories onFilter={handleFilter} />
         <div className='jobcard-container' style={{ display: 'flex', flexWrap: 'wrap',justifyContent: 'center',gap:'50px'}}>
                   {filteredJobs.map(contents => (

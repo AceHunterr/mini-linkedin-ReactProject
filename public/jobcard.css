@@ -164,6 +164,7 @@
   }
   
 
+
   .filter-btn-row{
     display: flex;
     flex-direction: row;
@@ -226,6 +227,29 @@
   }
 
 
+  .search-bar{
+    width: 100%;
+    position: relative;
+    margin: auto;
+  }
+  .search-bar input{
+
+    position: relative;
+    font-size: 1.7rem;
+    width: 60%;
+    border-radius: 5px;
+    background-color: var(--color-secondary-black);
+    margin: auto;
+    color: var(--color-grey-primary);
+  }
+
+  .search-icon {
+    transform: translateX(-2rem);
+    /* color: black; */
+    
+  }
+
+
   @media screen and (max-width: 900px) {
     .filter-popup{
       max-width: 100%;
@@ -242,4 +266,10 @@
     .filter-option-btn{
         margin-bottom: 12px;
     }
+    .search-bar input{
+      width: 90%;
+    }
 }
+
+
+
