@@ -10,7 +10,7 @@ const EmployerForm = () => {
   return (
     <>
     <div class="signup-container">
-      <form>
+      <form action='/recruitment'>
         <div class="form-group">
           <h2>Full Name</h2>
           <input type="text" required />

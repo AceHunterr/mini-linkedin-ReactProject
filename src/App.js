@@ -18,9 +18,10 @@ import Internships from "./pages/Internships";
 import Freelancer from "./pages/Freelancer";
 import EmployerRegistration from "./pages/EmployerRegistration";
 import SavedPage from "./pages/SavedPage";
-
+import phoneCodes from './phonecodes'
 
 const App = () => {
+  console.log(phoneCodes)
     return (
       <div className="hehe">
 

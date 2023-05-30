@@ -42,7 +42,7 @@ const ProfileForm = () => {
             />
                 
                 
-                <h3 className="profile-name">Name</h3>
+                {/* <h3 className="profile-name">Name</h3> */}
             </div>
             <div className="profile-right-content">
                 <div class="form-group">
