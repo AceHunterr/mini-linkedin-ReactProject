@@ -1,4 +1,0 @@
-Fix the navbar in the mobile port view
-Add Filter button to the job Cards page
-Add the save icon which sir told in the job Details page 
-Make the save ico functioning
